@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerimgs{
+            background-color: red;
+            background: url('./images/image-tanya.jpg');
+            width: 300px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .divcuadrados1{
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 300px 300px;
+        }
+        .red1{
+            background-color: red;
+            
+        }
+        .black1{
+            background-color: black;
+            
+        }
+
+        .divcuadrados2{
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 300px;
+        }
+        .red2{
+            background-color: red;
+            order: 2;
+            
+        }
+        .black2{
+            background-color: black;
+            order: 1;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="containerimgs">
+    </div>
+    <div class="buttons">
+        <button class="back">
+            back
+        </button>
+        <button class="preview">
+            preview
+        </button>
+        <h1 class="h1">tanya</h1>
+    </div>
+    <div class="divcuadrados1">
+        <div class="red1"></div>
+        <div class="black1"></div>
+        
+
+    </div>
+    <div class="divcuadrados2">
+        <div class="red2"></div>
+        <div class="black2"></div>
+        
+
+    </div>
+    <script>
+        const container = document.querySelector('.containerimgs')
+        const btnBack = document.querySelector('.back')
+        const btnPreview = document.querySelector('.preview')
+        const h1 = document.querySelector('.h1')
+
+        function hola(e){
+            btnPreview.addEventListener('click',(e)=>{
+                e=1
+                container.style.backgroundImage="url('./images/image-john.jpg')"
+            })
+            btnBack.addEventListener('click',(e)=>{
+                e=2
+            })
+        }
+
+
+        
+    </script>
+</body>
+</html>

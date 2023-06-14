@@ -1,0 +1,33 @@
+
+    [
+        {
+            "tittle" : "Basic",
+            "time":{
+                "monthly":"$19.99",
+                "yearly":"$199.99"
+            },
+            "storage":"500 Gb storage",
+            "users":"2 users Allowed",
+            "send":"Send up to 3Gb"
+        },
+        {
+            "tittle" : "Profesional",
+            "time":{
+                "monthly":"$24.99",
+                "yearly":"$249.99"
+            },
+            "storage":"1 Tb storage",
+            "users":"5 users Allowed",
+            "send":"Send up to 10Gb"
+        },
+        {
+            "tittle" : "Master",
+            "time":{
+                "monthly":"$39.99",
+                "yearly":"$199.99"
+            },
+            "storage":"2 Tb storage",
+            "users":"10 users Allowed",
+            "send":"Send up to 20Gb"
+        }
+    ]

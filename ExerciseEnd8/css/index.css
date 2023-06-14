@@ -1,0 +1,210 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--Very-dark-blue);
+}
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 70%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+.containerALL{
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    height: auto;
+    min-width: 320px;
+    padding: 10px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns:  280px;
+    grid-template-rows: repeat(7,200px);
+}
+
+.container-name{
+    padding: 12px;
+    background-color: var(--Violet-social);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 8px;
+}
+.container-name h1{
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 6px;
+    color: var(--Desaturated-blue);
+}
+.container-name p{
+    font-size: 20px;
+    margin: 0;
+    color: var(--Pale-Blue);
+
+}
+.container-name img{
+    width: 70px;
+    border: 2px solid white;
+    border-radius:50px;
+
+}
+.container-timeRoutines{
+    background-color: var(--Dark-blue);
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+    bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    height: 60px;
+}
+.container-timeRoutines ul{
+    padding-inline-start:0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #ffffff60;
+    font-size: 14px;
+}
+.container-timeRoutines ul li{
+    cursor: pointer;
+}
+.container-timeRoutines ul li:hover{
+    color: white;
+}
+
+
+.container-work{
+    margin: 0;
+}
+
+.color-work{
+    border-radius: 10px 10px 0 0 ;
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+}
+
+
+.container>div:nth-child(2)>div:nth-child(1){
+    background-color: var(--Light-red-work);
+}
+.container>div:nth-child(3)>div:nth-child(1){
+    background-color: var(--Soft-blue-play);
+}
+.container>div:nth-child(4)>div:nth-child(1){
+    background-color: var(--Light-red-study);
+}
+.container>div:nth-child(5)>div:nth-child(1){
+    background-color: var(--Lime-green-exercise);
+}
+.container>div:nth-child(6)>div:nth-child(1){
+    background-color: var(--Violet-social);
+}
+.container>div:nth-child(7)>div:nth-child(1){
+    background-color: var(--Soft-orange-self-care);
+}
+
+
+.color-work img{
+    width: 80px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+.container-info{
+    background-color: var(--Dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    padding: 15px 0;
+    border-radius: 10px;
+    bottom: 25px;
+    height: 90px;
+    cursor: pointer;
+}
+.container-info:hover{
+    background-color: hsl(237, 35%, 24%);
+}
+.container-info .last-week img{
+    cursor: pointer;
+}
+.container-info .horas h1,.container-info .horas h2,.container-info .last-week img,.container-info .last-week p{
+    margin: 6px;
+}
+.container-info .horas h1,.container-info .horas h2{
+    color: #ffffffff;
+}
+.container-info .horas h1{
+    font-size: 16px;
+}
+.container-info .last-week{
+    display: grid;
+    place-items: end;
+}
+.container-info .last-week p{
+    color: #ffffff50;
+}
+
+@media(min-width:760px) {
+    body{
+        padding:0 16px  ;
+        overflow: hidden;
+    }
+    .container{
+        gap: 15px;
+        grid-template-columns:  repeat(4,1fr);
+        grid-template-rows: repeat(2,200px);
+    }
+    .container-name-timeRoutines{
+        grid-row: 1/span 3
+    }
+    .container-name{
+        height: 270px;
+        display: block;
+        background-color: var(--Blue);
+        
+    }
+    .container-name>span>img{
+        margin-bottom: 15px;
+        
+    }
+    .container-name p{
+        font-size: 50px;
+        
+    }
+    .container-timeRoutines {
+        height: 115px;
+    }
+    .container-timeRoutines ul{
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    .containerALL{
+        padding-top: 50px;
+
+    }
+    .container-info{
+        height: 125px;
+    }
+}
+
+.color-li{
+    color: white;
+}
+
+
+

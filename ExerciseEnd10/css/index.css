@@ -1,0 +1,194 @@
+:root{
+    /* Font size word */
+    --sm:18px;
+    /* Primary */
+    --Light-red: #ff5757;
+    --Orangey-yellow: #ffb01f;
+    --Green-teal: #00bd91;
+    --Cobalt-blue: #1125d4;
+    /* Gradient */
+    --Light-slate-blue-background: #7857ff;
+    --Light-royal-blue-background: #2e2be9;
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: #303b5a;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+.container{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.container-1{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,auto);
+}
+.result{
+    background: linear-gradient(0deg,var(--Light-royal-blue-background),var(--Light-slate-blue-background));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 40px;
+    border-radius: 0 0 25px 25px;
+}
+.result>h1:nth-child(1){
+    color: var(--Light-lavender);
+    font-size: var(--sm);
+}
+.result>h1:nth-child(3){
+    color: var(--White);
+    font-size: var(--sm);
+}
+.result>div{
+    background: linear-gradient(#00000030,#00000001);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.result>div>h1,.result>div>p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.result>div>h1{
+    color: var(--White);
+    font-size: 40px;
+}
+.result>div>p{
+    font-size: 15px;
+    color: var(--Light-lavender);
+}
+.result>p{
+    font-size: 12px;
+    color: var(--Light-lavender);
+}
+.summary{
+    padding: 10px 20px;
+}
+.summary>h1{
+    font-size: 15px;
+    color: var(--Dark-gray-blue);
+}
+
+.card-summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+.icon-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.card-summary .score p{
+    color: #303b5a70;
+}
+.card-summary .score b{
+    color: var(--Dark-gray-blue);
+}
+.container-1 .button-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container-1 .button-div button{
+    background-color: var(--Dark-gray-blue);
+    border: none;
+    color: white;
+    height: 45px;
+    width: 90%;
+    border-radius:30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.container-1 .button-div button:hover{
+    background: linear-gradient(0deg,var(--Light-royal-blue-background),var(--Light-slate-blue-background));
+}
+.summary>div:nth-child(2){
+    background-color: #ff575725;
+}
+.summary>div:nth-child(2) .icon-title p{
+    color: var(--Light-red);
+}
+
+.summary>div:nth-child(3){
+    background-color: #ffb01f25;
+}
+.summary>div:nth-child(3) .icon-title p{
+    color: var(--Orangey-yellow);
+}
+
+.summary>div:nth-child(4){
+    background-color: #00bd9125;
+}
+.summary>div:nth-child(4) .icon-title p{
+    color: var(--Green-teal);
+}
+
+.summary>div:nth-child(5){
+    background-color: #1125d425;
+}
+.summary>div:nth-child(5) .icon-title p{
+    color: var(--Cobalt-blue);
+}
+
+@media (min-width:768px) {
+    .container{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+    .container-1{
+        grid-template-columns: repeat(2,400px);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        
+    }
+    .result{
+        border-radius:20px;
+        position: relative;
+        left: 12px;
+        box-shadow: 1px 5px 10px #00000050;
+
+    }
+    .summary-btn{
+        border-radius: 0 20px 20px 0;
+        padding: 20px;
+        box-shadow: 5px 5px 10px #00000050;
+
+    }
+    .result>div{
+        height: 200px;
+        width: 200px;
+
+    }
+    .result>div>h1{
+        font-size: 60px;
+        
+    }
+    .result>div>p{
+        font-size: 20px;
+        
+    }
+}

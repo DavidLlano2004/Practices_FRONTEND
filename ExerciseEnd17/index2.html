@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container_li{
+            display: flex;
+        }
+        ul{
+            padding-inline-start: 0;
+            list-style: none;
+            text-align: center;
+        }
+        .container{
+            background-color: yellow;
+            width: 100%;
+            
+        }
+        .items>p{
+            background-color: red;
+        }
+        p{
+            margin: 0;
+        }
+        .container{
+            background-color: rebeccapurple;
+            min-height: auto;
+        }
+        .items{
+            transition: 20s;
+            cursor: pointer;
+        }
+        .items p:hover{
+            background-color: #ffffff50;
+        }
+        .items>ul{
+            display: none;
+        }
+        .appear{
+            display: block !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="container_li">
+            <li class="items items1">
+                <p>Product</p>
+                <ul class="subcontainer_li subcontainer_li1 ">
+                    <li>Overview</li>
+                    <li>Pricing</li>
+                    <li>Marketplace</li>
+                    <li>Features</li>
+                    <li>Integrations</li>
+                </ul>
+            </li>
+            <li class="items items2">
+                <p>Company</p>
+                <ul class="subcontainer_li subcontainer_li2">
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Blog</li>
+                    <li>Carrers</li>
+                </ul>
+            </li>
+            <li class="items items3">
+                <p>Connect</p>
+                <ul class="subcontainer_li subcontainer_li3">
+                    <li>Contact</li>
+                    <li>Newsletter</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const items = document.querySelectorAll('.items')
+        const subcontainer_li = document.querySelectorAll('.subcontainer_li')
+
+        let activeIndex = -1;
+        items.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if (activeIndex === i) {
+                    subcontainer_li[activeIndex].classList.toggle('appear');
+                } else {
+                    if (activeIndex !== -1) {
+                        subcontainer_li[activeIndex].classList.remove('appear');
+                    }
+                    subcontainer_li[i].classList.add('appear');
+                }
+                activeIndex = i;
+            });
+        });
+    </script>
+</body>
+</html>

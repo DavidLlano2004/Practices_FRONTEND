@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Age calculator app</title>
+</head>
+<body>
+  <div class="container-full">
+    <div class="container">
+      <div class="input-fecha">
+        <div class="label">
+          <label for="" class="labelDia">Día</label>
+          <input type="number" class="dia" placeholder="DD" maxlength="2" onchange="">
+          <p class="diaP"></p>
+        </div>
+        <div>
+          <label for="" class="labelMes">Mes</label>
+          <input type="number" class="mes" placeholder="MM" maxlength="2">
+          <p class="mesP"></p>
+
+        </div>
+        <div>
+          <label for="" class="labelAño">Año</label>
+          <input type="number" class="año" placeholder="YYYY" maxlength="4">
+          <p class="añoP"></p>
+        </div>
+      </div>
+      <div class="btn-line-enter">
+        <div class="line"></div>
+        <button class="btn-enter">
+          <img src="./assets/images/icon-arrow.svg" alt="" class="btn-image">
+        </button>
+      </div>
+      <div class="fecha-escrita">
+        <p class="años"><b class="guiones_numeros_años">--</b>años</p>
+        <p class="meses"><b class="guiones_numeros_meses">--</b>meses</p>
+        <p class="dias"><b class="guiones_numeros_dias">--</b>dias</p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body{
+    background: rgb(0,0,0);
+    height: 100%;
+    background: linear-gradient(0deg, #af67e9 35%, hsl(240, 73%, 65%) 100%) no-repeat;
+    padding: 100px;
+
+    
+}
+.row{
+    background: url('./images/bg-pattern-desktop.svg') no-repeat center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 50px;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body{
+    padding: 0;
+
+    }
+    .row{
+    padding: 0;
+
+    }
+}
+.acordeon{
+    
+    padding: 2rem;
+    width: 90vh;
+    max-width: 120em;
+}
+.acordeon .bloque{
+border-bottom: 1px solid #ffffff90;
+padding:1em;
+
+}
+.acordeon .bloque .h1{
+cursor: pointer;
+color: grey;
+height: 10px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.h12{
+font-size: 20px;
+
+}
+.acordeon .bloque .h1:hover{
+    color: orange;
+}
+.acordeon .bloque .contenido{
+
+height: 0;
+padding: 0 ;
+overflow: hidden; 
+transition: all 1s ease;
+}
+.acordeon .bloque.activo .contenido{
+    height: 4.4em;
+}
+.acordeon .bloque.activo .h1{
+    color: black;
+    
+}
+.acordeon .bloque.activo .arrow{
+    transform: rotateX(180deg);
+
+}
+
+.col1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top:100px ;
+}
+.acordeon{
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    
+}

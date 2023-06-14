@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--Cream);
+    
+}
+.containerAll{
+    display: grid;
+    place-items: center;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px;
+    position: relative;
+    width: 90%;
+    margin: 50px 0;
+}
+.balance{
+    background-color: var(--Soft-red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.balance .tittle-price>p{
+    margin: 0;
+}
+.balance .tittle-price>p:nth-child(1){
+    color: var(--Cream);
+}
+.balance .tittle-price>p:nth-child(2){
+    color: var(--Very-pale-orange);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.graficsInfo{
+    background-color: var(--Very-pale-orange);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 20px;
+}
+.graficsInfo .tittle > h1{
+    font-size: 22px;
+    color:var(--Dark-brown) ;
+}
+.graficsInfo .container-grafics{
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    grid-template-rows: 180px;
+    align-items: end;
+}
+.graficsInfo .container-grafics .grafic{
+    width: auto;
+    margin: 0 2px;
+    border-radius: 5px;
+}
+.graficsInfo .container-grafics .grafic:nth-child(1){
+    height: 50px;
+    background-color: var(--Soft-red);
+}
+.graficsInfo .container-grafics .grafic:nth-child(2){
+    height: 100px;
+    background-color: var(--Soft-red);
+}
+.graficsInfo .container-grafics .grafic:nth-child(3){
+    height: 150px;;
+    background-color: var(--Cyan);
+}
+.graficsInfo .container-grafics .grafic:nth-child(4){
+    height: 90px;
+    background-color: var(--Soft-red);
+}
+.graficsInfo .container-grafics .grafic:nth-child(5){
+    height: 70px;
+    background-color: var(--Soft-red);
+}
+.graficsInfo .container-grafics .grafic:nth-child(6){
+    height: 120px;
+    background-color: var(--Soft-red);
+}
+.graficsInfo .container-grafics .grafic:nth-child(7){
+    height: 60px;
+    background-color: var(--Soft-red);
+}
+
+.graficsInfo .container-grafics .grafic .price-day{
+    background-color: var(--Dark-brown);
+    height: 20px;
+    width: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: var(--Very-pale-orange);
+    position: relative;
+    bottom: 25px;
+    font-size:10px;
+}
+.graficsInfo .container-grafics p{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    width: auto;
+    text-align: center;
+    color: var(--Medium-brown);
+}
+
+.line{
+    border: 1px solid var(--Cream);
+    margin: 20px 0;
+}
+.container-total-month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-total-month p{
+  margin: 0;
+}
+.container-total-month .total-tittle>p:first-child{
+    color: var(--Medium-brown);
+    font-size: 15px;
+}
+.container-total-month .total-tittle>p:last-child{
+    color: var(--Dark-brown);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.container-total-month .percent-title{
+    display:flex ;
+    flex-direction: column;
+    align-items: end;
+}
+.container-total-month .percent-title>p:first-child{
+   color: var(--Dark-brown);
+   font-weight: bold;
+   font-size: 15px;
+}
+.container-total-month .percent-title>p:last-child{
+   color: var(--Medium-brown);
+}
+
+.hiden{
+    display: none !important;
+}
+@media (min-width:700px) {
+    .container{
+        width: 50%;
+    }
+}

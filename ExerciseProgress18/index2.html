@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .animacion1{
+            animation: prueba1 1s forwards ease;
+
+        }
+        .animacion2{
+            animation: prueba2 1s forwards ease ;
+
+        }
+        .caja{
+            background-color: red;
+            height: 100px;
+            width: 80%;
+            /* animation: prueba 10s; */
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: translateY(-300px);
+
+        }
+        .animacion3{
+
+            animation: prueba3 .9s forwards ease;
+        }
+        .caja2{
+            background-color: green;
+            height: 100px;
+            width: 80%;
+            margin: 0 auto;
+            transform: scale(0.0);
+        }
+
+        @keyframes prueba3{
+            from{
+                transform: scale(0.0);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+
+        @keyframes prueba1 {
+            from{
+                transform: translateY(-300px);
+            }
+            to{
+                transform: translateY(-100px);
+            }
+        }
+        @keyframes prueba2 {
+            from{
+                transform: translateY(-100px);
+            }
+            to{
+                transform: translateY(-300px);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam amet eum similique. Perspiciatis, nam iure maiores sint vitae saepe.</p>
+        <button class="btnhola">Di Hola</button>
+        <button class="btnclose">x</button>
+        <button class="btnOk">ok</button>
+        <div class="caja">
+
+        </div>
+        <div class="caja2">
+
+        </div>
+    </div>
+    <script>
+        const btnhola = document.querySelector('.btnhola')
+        const caja = document.querySelector('.caja')
+        const caja2 = document.querySelector('.caja2')
+
+        const btnclose = document.querySelector('.btnclose')
+        const btnOk = document.querySelector('.btnOk')
+
+
+
+        btnhola.addEventListener('click',()=>{
+            caja.classList.add('animacion1')
+            caja.classList.remove('animacion2')
+
+
+            
+        })
+        btnclose.addEventListener('click',()=>{
+            caja.classList.add('animacion2')
+            caja.classList.remove('animacion1')
+
+        })
+        btnOk.addEventListener('click',()=>{
+            caja2.classList.add('animacion3')
+
+        })
+        
+    </script>
+</body>
+</html>

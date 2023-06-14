@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap');
+:root{
+    --Moderate-cyan: #3cb4ac;
+    --Dark-cyan: hsl(176, 72%, 28%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-gray: hsl(0, 0%, 48%);
+
+}
+
+body{
+    box-sizing: content-box;
+    font-family: 'Commissioner', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.apperBgMenu{
+    background-color: #00000050;
+    z-index: 3;
+
+}
+.animationAppearMenu{
+    animation: appearMenu 1s forwards;
+    
+}
+.animationCloseMenu{
+    animation: closeMenu 3s forwards;
+
+}
+body .bg_menu_float{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: absolute;
+}
+body .bg_menu_float .container_info_float{
+    transform: translateY(-9999px);
+    background-color: white;
+    margin: 0 15px;
+    padding: 25px;
+    border-radius: 10px;
+    z-index: 10;
+    position: relative;
+}
+body .bg_menu_float .container_info_float .enter_pledge{
+    border-top: 1px solid rgb(217, 217, 217);
+    width: 100%;
+    margin-top: 20px;
+}
+body .bg_menu_float .container_info_float .enter_pledge>h1{
+    text-align: center;
+    font-size: 15px !important;
+    color: rgb(182, 182, 182);
+    margin-bottom: 20px;
+}
+body .bg_menu_float .container_info_float .enter_pledge .input_btn_pledge{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+body .bg_menu_float .container_info_float .enter_pledge .input_btn_pledge input{
+    width: 40%;
+    border-radius: 50px;
+    border: 1px solid gray;
+    outline: none;
+    text-indent: 10px;
+    padding: 12px;
+    font-weight: bold;
+
+}
+body .bg_menu_float .container_info_float .enter_pledge .input_btn_pledge button{
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    width: 60%;
+    color: white;
+    background-color: var(--Moderate-cyan);
+    font-weight: bold;
+
+
+}
+
+body .bg_menu_float .container_info_float .cards_plans_float_menu:first-child>div:last-child{
+    display: none;
+}
+
+
+
+@keyframes appearMenu {
+    from{
+        transform: translateY(-9999px);
+    }
+    to{
+        transform: translateY(100px);
+    }
+}
+
+@keyframes closeMenu {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(-9000px);
+    }
+}
+body .bg_menu_float .container_info_float h1{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+body .bg_menu_float .container_info_float h2{
+    margin: 0;
+    font-size: 15px;
+    color: var(--Moderate-cyan);
+}
+body .bg_menu_float .container_info_float p{
+    margin: 0;
+    font-size: 13px;
+    color: var(--Dark-gray);
+    line-height: 22px;
+}
+body .bg_menu_float .container_info_float .title_close{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+body .bg_menu_float .container_info_float .title_close button{
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    border: none;
+}
+
+body .bg_menu_float .container_info_float .cards_plans_float_menu{
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+
+}
+
+body .bg_menu_float .container_info_float .cards_plans_float_menu h1{
+    font-size: 15px;
+}
+body .bg_menu_float .container_info_float .cards_plans_float_menu h2{
+    font-size: 12px;
+}
+body .bg_menu_float .container_info_float .cards_plans_float_menu div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+body .bg_menu_float .container_info_float .cards_plans_float_menu div:first-child>input{
+    width: 25px;
+    height: 25px;
+
+}
+body .bg_menu_float .container_info_float .cards_plans_float_menu>div:last-child h1{
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 24px;
+
+}
+body .bg_menu_float .container_info_float .cards_plans_float_menu>div:last-child i{
+    font-size: 15px;
+    color: rgb(216, 216, 216);
+
+}
+
+header{
+    background: url('../../public/images/image-hero-mobile.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+    padding: 25px 15px;
+    position: relative;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    
+}
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-inline-start: 0;
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 20px;
+}
+header nav ul li{
+    padding: 15px;
+}
+header nav ul li:nth-child(2){
+    border: 1px solid rgb(225, 225, 225);
+    border-left: none;
+    border-right: none;
+
+}
+main{
+    position: relative;
+    z-index: 2;
+
+}
+main article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding:  0 15px;
+    bottom: 70px;
+}
+main article section{
+    border: 1px solid rgb(216, 216, 216);
+    background-color: white;
+    padding: 0 15px 25px 25px;
+    text-align: center;
+    border-radius: 10px;
+    width: 85%;
+    margin-bottom: 20px;
+}
+main article .book_mark>img{
+    position: relative;
+    bottom: 30px;
+ }
+main article .book_mark h1{
+   font-weight: bold;
+   margin-top: 0;
+}
+main article .book_mark p{
+    color: var(--Dark-gray);
+}
+main article .book_mark .back_mark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main article .book_mark .back_mark .btnBack{
+    background-color: var(--Moderate-cyan);
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 50px;
+    padding: 8px;
+    width: 70%;
+    font-weight: bold;
+}
+main article .price_barra .price h1{
+    font-weight: bold; 
+    font-size: 30px;
+    margin-bottom: 0;
+}
+main article .price_barra .price p{
+    color: var(--Dark-gray); 
+    margin-top: 2px;
+}
+main article .price_barra .barra{
+    width: 100%;
+    height: 12px;
+    border-radius: 50px;
+    background-color: #00000020;
+}
+main article .price_barra .barra .barr_progress{
+    width: 70%;
+    height: 12px;
+    border-radius: 50px;
+    background-color: var(--Moderate-cyan);
+}
+main article .about_project{
+    text-align: start;
+    padding: 20px;
+}
+main article .about_project>h2{
+    font-weight: bold;
+    font-size: 15px;
+}
+main article .about_project>p{
+    font-size: 13px;
+    color: var(--Dark-gray);
+    line-height: 20px;
+}
+main article .cards_plans{
+    border: 1px solid rgb(216, 216, 216) ;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 15px;
+    position: relative;
+}
+main article .cards_plans h1{
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+main article .cards_plans p{
+    margin: 0;
+    color: var(--Dark-gray);
+    line-height: 20px;
+
+
+}
+main article .cards_plans div:first-child p{
+   font-weight: bold;
+   font-size: 14px;
+   color: var(--Moderate-cyan);
+   margin-bottom: 10px;
+
+}
+main article .cards_plans  div:last-child{
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+
+ 
+}
+
+main article .cards_plans div:last-child h1{
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+main article .cards_plans  div:last-child h1>i{
+    color: rgb(224, 224, 224);
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+main article .cards_plans div:last-child button{
+    background-color: var(--Moderate-cyan);
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 50px;
+    padding: 8px;
+    width: 70%;
+    font-weight: bold;
+}
+
+.animationApperThanksClass{
+    animation: animationAppearThanks 1s forwards ;
+    z-index: 7;
+}
+.container_thanks{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius:10px;
+    position: absolute;
+    transform: scale(0);
+    top: 100px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.container_thanks h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.container_thanks p{
+    font-size: 15px;
+    color: var(--Dark-gray);
+}
+.container_thanks button{
+    padding: 10px;
+    width: 50%;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    background-color: var(--Moderate-cyan);
+}
+@keyframes animationAppearThanks {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+
+    }
+}
+
+ 
+.hiden{
+    display: none;
+}

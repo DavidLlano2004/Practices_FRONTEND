@@ -1,0 +1,101 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+body main.container{
+    background: url('/resources/images/bg-pattern-desktop.svg') no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100vh;
+}
+.col1{
+    padding: 100px;
+}
+.col2{
+    background: url('/resources/images/hero-desktop.jpg')no-repeat;
+    background-size: cover;
+}
+.col1 section{
+    margin-top: 70px;
+}
+.col1 section h1.tittle{
+    font-family:'Poppins';
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+}
+.col1 section p.text{
+    color: hsl(0, 36%, 70%);
+    font-weight: 900;
+    margin: 0;
+    margin-top:20px ;
+}
+.col1 footer{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+.col1 footer input.inputEmail{
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid hsl(0, 36%, 70%);
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+}
+.col1 footer button.submit{
+    height:58px;
+    width: 150px;
+    position: relative;
+    right: 50px;
+    box-shadow: -4px 4px 10px 1px  #00000050;
+    background:linear-gradient(hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.col1 footer button.submit:hover{
+    transform: scale(1.1);
+}
+
+.col1 footer button.submit span svg.arrow{
+    color: white;
+    text-align: center;
+}
+.col1 p.textError{
+    font-size:15px;
+    transition: all 1s ease-in;
+}
+.colorGreen{
+    color: rgb(125, 246, 125);
+}
+.colorPink{
+    color: hsl(0, 36%, 70%);
+
+}
+.col1 footer span svg.iconError{
+    transform: translate(-100px,-20px);
+    position: absolute;
+    height: 40px;
+    width: 40px;
+} 
+.hidden{
+    display: none;
+}
+@media only screen and (min-device-width:320px) and (max-device-width:900px){
+    body main.container{
+        display: grid;
+        grid-template-columns: 100vh;
+        grid-template-rows: repeat(2,1fr);
+
+    }
+    .col2{
+        order: 0;
+        min-height: 10vh;
+        min-width: 100vw;
+    }
+}

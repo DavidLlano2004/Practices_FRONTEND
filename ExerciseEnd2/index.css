@@ -1,0 +1,88 @@
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+.col1{
+    background: url('images/drawers.jpg')no-repeat;
+    flex-basis: 50%;
+    border-radius: 10px 0 0 10px;
+
+
+}
+.col2{
+    flex-basis: 50%;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    padding: 50px;
+
+}
+.tittle{
+    color: hsl(217, 19%, 35%);
+    font-size:25px;
+}
+.text{
+    color: hsl(214, 17%, 51%);
+    font-size:15px;
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.img-name{
+    display: flex;
+    gap: 20px;
+}
+.name,.fech{
+    font-size: 12px;
+}
+.fech{
+    color: hsl(214, 17%, 51%);
+
+}
+.name{
+    color: hsl(217, 19%, 35%);
+
+}
+.share{
+    align-self: center;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.share:hover{
+    transform: scale(1.1) ;
+}
+.box-share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    gap: 20px;
+    color: white;
+    padding: 15px;
+    border-radius:20px ;
+    position: relative;
+    left: 150px;
+    bottom: 80px;
+    
+
+}
+.ocultar{
+    display: none;
+}
+@media only screen and (min-device-width:320px) and (max-device-width:800px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .col1{
+        flex-basis: 100%;
+    }
+    .col2{
+        flex-basis: 100%;
+    }
+}

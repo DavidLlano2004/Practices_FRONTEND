@@ -1,0 +1,115 @@
+:root{
+    --DarkBlue: hsl(240, 38%, 20%);
+    --GrayishBlue: #babacf;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,auto);
+}
+.container-img{
+    padding: 20px 0;
+    background: url('../../images/pattern-bg.svg') no-repeat center;
+    background-size: 300px;
+}
+.img{
+    background: url('../../images/image-tanya.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom:30px ;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    box-shadow: 0 6px 10px 1px #00000050;
+
+    
+}
+.container-buttons{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 12px;
+    gap: 20px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 6px 10px 1px #00000050;
+}
+.container-buttons button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.container-text{
+    background: url('../../images/pattern-quotes.svg') no-repeat top;
+    background-size: 50px;
+    padding: 8px 30px;
+    text-align: center;
+}
+.container-text>p:first-child{
+    color: #6e6e75;
+}
+.container-text>p:last-child{
+    color: var(--GrayishBlue);
+    margin: 0 0 16px 0;
+}
+.container-text>h1{
+    color: var(--DarkBlue);
+    margin: 16px 0 0 0;
+    font-size: 20px;
+}
+@media (min-width:700px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: 110%;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-img{
+        order: 2;
+    }
+    .container-text{
+        order: 1;
+    }
+    .img{
+        height: 500px;
+        align-items: start;
+        background-size: cover;
+    }
+    .container-img{
+        padding: 20px 0;
+        background: url('../../images/pattern-bg.svg') no-repeat center;
+        background-size: cover;
+    }
+    .container-text{
+        background: url('../../images/pattern-quotes.svg') no-repeat top;
+        background-size: 100px;
+        padding: 8px 30px;
+        text-align: start;
+        
+    }
+    .container-text>p:first-child{
+        font-size: 25px;
+        
+    }
+    .name,.employee{
+        display: inline-block;
+    }
+    
+    
+   
+}

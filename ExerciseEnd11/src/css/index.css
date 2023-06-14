@@ -1,0 +1,98 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --sm:12px;
+    --md:18px;
+    --lg:24px;
+    --xlg:28px;
+}
+body{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Manrope', sans-serif; ;
+    background-color: var(--Dark-Blue);
+}
+.containerall{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    text-align: center;
+    padding: 0;
+    width: 90%;
+    height: 45%;
+}
+.advices{
+    height: 100%;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 10px;
+    margin: 0;
+    padding: 20px;
+}
+.advices h2{
+    color: var(--Neon-Green);
+    font-size: var(--sm);
+}
+.advices p{
+    color: var(--Light-Cyan);
+    font-size: var(--lg);
+
+}
+
+.line{
+    border: 1px solid var(--Grayish-Blue);
+    height: 0px;
+}
+.circle-pause>svg{
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 50%;
+    position: relative;
+    bottom: 20px;
+}
+.container button{
+    background-color: var(--Neon-Green);
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+}
+.container button>span{
+    display: grid;
+    place-items: center;
+}
+.container button:hover{
+    box-shadow: 0 0  10px 5px var(--Neon-Green);
+}
+.container button>span>img{
+    transition: all 1s ease;
+}
+.container button>span>img:hover{
+    transform: rotate(360deg);
+}
+.advices-2{
+    overflow-y: auto;
+    height: 85%;
+}
+@media (min-width:767px) {
+    .container{
+        width: 70%;
+    }
+
+    .advices h2{
+        font-size: var(--md);
+    }
+    .advices p{
+        font-size: var(--xlg);
+    
+    }
+
+}
